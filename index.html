@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Maze Scary</title>
+</head>
+
+<body>
+    <div id="menu">
+        <button class="play" onclick="comecar()">PLAY</button>
+
+        <h1>Maze Scary</h1>
+        <h2 style="margin-bottom: 30px;">Seja bem vindo ao jogo do labirinto<h2>
+                <h2>Tutorial:</h2>
+                <p>Passe com o mouse pelo caminho azul sem tocar nas paredes pretas, a meta é chegar no quadrado
+                    vermelho</p>
+                <address style="color: #ccc;">Feito por Marcelo Vieira Gonçalves</address>
+                <address style="color: #ccc;">v1.0</address>
+
+    </div>
+
+    <div id="ganhou">
+        <h2 id="txtGanhou">Parabéns Você passou as 3 fases!!! <br>Toma aqui seu premio. :D</h2>
+        <img src="img/img-premio.jpg">
+    </div>    
+    
+    </div>
+
+    <div id="tudo">
+
+        <div onmouseover="jumpScare()" id="paredinha"></div>
+
+        <a id="reset" href="index.html">Recomeçar</a>
+
+        <img id="imgSusto"
+            src="img/jumpscare.png">
+
+        <audio id="susto">
+            <source src="audio/grito-morreu.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="somGanhou">
+            <source src="audio/audio-ganhou.mp3" type="audio/mpeg">
+        </audio>
+
+
+        <div onmouseover="passouf1()" id="ganhouf1"></div>
+
+
+
+        <div onmouseover="jumpScare()" id="ladoEsquerdo"></div>
+
+        <div onmouseover="jumpScare()" id="ladoDireito"></div>
+
+        <!--FASE 2-->
+        <div id="fase2">
+            <div onmouseover="jumpScare()"class="labirinto"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseOne1"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseOne2"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseOne3"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseOne4"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseOne5"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseOne6"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseOne7"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseOne8"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseOne9"></div>
+
+            <div onmouseover="passouf2()" id="ganhouFaseOne"></div>
+        </div>
+
+        <!--FASE 3-->
+        <div id="fase3">
+            <div onmouseover="jumpScare()" class="labirinto"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseTwo1"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseTwo2"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseTwo3"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseTwo4"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseTwo5"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseTwo6"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseTwo7"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseTwo8"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseTwo9"></div>
+            <div onmouseover="jumpScare()" id="paredeFaseTwo10"></div>
+
+            <img id="miniSusto" src="img/mini-susto.jpg">
+
+            <audio id="hello">
+                <source src="audio/hello.mp3" type="audio/mpeg">
+            </audio>
+            <div onmouseout="limpaSusto()" onmouseover="sustoSurpresa()" id="sustoSurpresa"></div>
+
+            <div onmouseover="ganhou()" id="ganhouFaseTwo"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
